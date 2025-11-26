@@ -27,8 +27,8 @@ public class NightShift {
     }
 
     public double addNoturno(double horasTrabalhadas, double valorHora, double adicionalPercentual) {
-        double valorBase = horasTrabalhadas * valorHora;
-        double adicional = valorBase * (adicionalPercentual / 100);
-        return valorBase + adicional;
+        double salario = horasTrabalhadas * valorHora;
+        double salarioFinal = horasTrabalhadas * (adicionalPercentual / 100);
+        return horasTrabalhadas + salario + salarioFinal;
     }
 }
