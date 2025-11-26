@@ -8,7 +8,7 @@ public class NightShift {
 
     public NightShift(String diasTrabalhados, double salario) {
         this.diasTrabalhados = diasTrabalhados;
-        this.salario = 0;
+        this.salario = salario;
     }
 
     public String getDiasTrabalhados() {
@@ -18,7 +18,15 @@ public class NightShift {
         this.diasTrabalhados = diasTrabalhados;
     }
 
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
     public double addNoturno(double horasTrabalhadas, double addNot) {
-        return horasTrabalhadas * addNot;
+        return this.salario += horasTrabalhadas * addNot;
     }
 }
